@@ -26,8 +26,28 @@ public class HelloController {
         model.addAttribute("name", name);
         return "hello "+name;
     }
+    @GetMapping("hello-api")
+    @ResponseBody
+    // ResponseBody를 사용하며 객체를 반환하면 객체가 JSON 형태로 변환됨.
+    public Hello helloApi(@RequestParam("name") String name, Model model){
+        Hello hello = new Hello();
 
+        hello.setName(name);
+        return hello;
+    }
 
+    static class Hello{
+        private String name;
+        // private : 외부에서 접근 불가 → Getter, Setter로 데이터 조작
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
 }
 
 
