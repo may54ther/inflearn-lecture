@@ -90,11 +90,15 @@ static class Hello{
 }
 ```
 
+# 스프링 빈과 의존관계
+> ## DI (Dependency Injection)
+
 
 ---
 ## 메모
 - **Optional** (Java 8)<br>
   ```null```이 될 수도 있는 객체을 감싸고 있는 일종의 Wrapper Class 
-
+- @Controller 
+Spring 
    
     
