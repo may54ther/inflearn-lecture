@@ -58,8 +58,8 @@ public class HelloController {
 - ```th:text="${name}"``` : **Controller**에서 받은 데이터 사용
 
 >  ## @ResponseBody
-```@ResponseBody``` 어노테이션을 사용하는 경우 ```viewResolver``` 대신 ```HttpMessageConterter```를 통해 ```HTTP Body```에 문자 내용을 직접 반환한다.
-- ```StringHttpMessageConverter```: 문자열
+```@ResponseBody``` 어노테이션을 사용하는 경우 ```viewResolver``` 대신 ```HttpMessageConverter```를 통해 ```HTTP Body```에 문자 내용을 직접 반환한다.
+- ```StringHttpMessageㅍ```: 문자열
 - ```MappingJackson2HttpMessageConverter```: 객체 → JSON
 
 ### 문자열  
@@ -163,6 +163,47 @@ public class SpringConfig {
 }
 
 ```
+# 스프링 DB 접근 기술
+> 해당 강의에서는 [h2](https://www.h2database.com/html/main.html) 를 사용하여 **DB 접근 기술** 실습을 진행 
+> h2 설정을 위해 
+> 
+> **build.gradle**
+> ```
+> dependencies {
+>     ... 
+>     runtimeOnly 'com.h2database:h2' 
+> }
+> ```
+> **application.properties**
+> ```
+> spring.datasource.url=jdbc:h2:tcp://localhost/~/test
+> spring.datasource.driver-class-name=org.h2.Driver
+> spring.datasource.username=sa
+> ```
+
+>## 1. JDBC(Java Database Connectivity)
+데이터베이스에 접속할 수 있도록 하는 Java API
+
+**build.gradle**
+```
+dependencies {
+    ...
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+}
+```
+
+> ## 2. Persistence Framework
+데이터의 저장, 조회, 변경, 삭제를 다루는 클래스 및 설정 파일들의 집합   
+복잡하고 번거로운 JDBC Programming과 다르게 빠르고 안정적인 구동 보장
+
+> ### 2.1 SQL Mapper   
+SQL 구문을 통해 데이터베이스에 질의한 결과를 객체(Object)에 매핑(Mapping) 시켜줌
+- 예) Mybatis, JdbcTemplate 등
+
+> ### 2.2 ORM(Object-Relational Mapping; 객체-관계 매핑)
+개별의 객체(Object)와 데이터베이스 사이를 중간에서 매핑(Mapping) 시켜줌  
+SQL 구문의 작성없이 메서드, 코드를 이용하여 직관적인 데이터 조작 가능 → 객체 간의 관계를 바탕으로 SQL 자동 생성
+- 예) JPA, Hibernate 등
 
 
 
