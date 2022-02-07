@@ -1,6 +1,6 @@
 # Hello-Spring
 
-"김영한의 [스프링 입문](https://www.inflearn.com/course/스프링-입문-스프링부트)" 강의를 보며 생성한 레파지토리
+"김영한의 [스프링 입문](https://www.inflearn.com/course/스프링-입문-스프링부트)" 강의 
 
 
 
