@@ -17,6 +17,7 @@ public class AppConfig {
     // @Bean memberService -> new MemoryMemberRepository()
     // @Bean orderService -> new MemoryMemberRepository()
     // ... 싱글톤이 깨지는 것이 아닐까?
+    // @Configuration -> 바이트 코드를 조작(CGLIB)하는 기술을 통해 싱글톤이 깨지지 않게 함.
 
     @Bean
     public MemberService memberService() {
