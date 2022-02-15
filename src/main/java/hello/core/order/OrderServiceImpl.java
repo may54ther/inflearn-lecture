@@ -11,18 +11,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-//@RequiredArgsConstructor
-//상단 어노테이션 추가하면 생성자 생략 가능
+//@RequiredArgsConstructor: 생성자를 자동으로 추가하므로 코드로 작성할 필요 없음
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-//   Lombok -> @RequiredArgsConstructor : 아래 생성자 코드를 자동 생성해줌.
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy rateDiscountPolicy) {
         this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
+        this.discountPolicy = rateDiscountPolicy;
     }
 
     @Override
