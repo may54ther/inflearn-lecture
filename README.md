@@ -116,34 +116,36 @@ IoC 컨테이너에 의해 관리되고 애플리케이션의 핵심을 이루�
 
 ### Live Template
 >```Cmd + J``` 로 등록된 Live Template 목록을 확인 가능
+
 - ```psvm``` → ```public static void main```
 - ```sout``` → ```System.out.println```
 - ```soutv``` → ```System.out.println("object = " + object)```
 
 ### Shortcuts
-> Mac 전용 단축키
+> Mac 전용 단축키  
+
 - ```Cmd + ,```: 설정 (Preferences)
 - ```Cmd + ;```: 프로젝트 설정 (Project Structure)   
-<br/>
+<br>
 - ```Cmd + 1```: Project 열기
 - ```Opt + F12```: Terminal 열기   
-<br/>
+<br>
 - ```Shift + Shift```: 전체 검색 (Search Everywhere)
 - ```Cmd + E```: 최근에 사용한 파일 (Recent Files)
 - ```Cmd + Shift + E```: Recent Locations   
-<br/>
+<br>
 - ```Ctrl + ↑↓```: 이전/다음 메서드 이동
 - ```Cmd +Opt + ←→```: 이전/다음 탭 이동   
-<br/>
+<br>
 - ```Ctrl + Space```: 자동완성 (Basic code completion)
 - ```Ctrl + Shift + Space```: 스마트 자동완성 (Smart code completion)   
-<br/>
+<br>
 - ```Opt + Enter```: 빠른 수정 제안 (Show intention actions and quick-fixes)
 - ```Cmd + N```: 자동 완성 (Generate)
 - ```Ctrl + I```: 오버라이드 메서드 자동완성 (Implement Methods)
 - ```Cmd + Opt + V```: 변수 추출(Extract Variables)
 - ```Cmd + Shift + T ```: 테스트 클래스 생성   
-<br/>
+<br>
 - ```Shift + F6```: 이름 일괄 변경하기 (Rename)
 - ```Cmd + Shift + F6```: 타입 일괄 변경하기 (Type Migration)
 
