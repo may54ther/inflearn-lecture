@@ -35,11 +35,8 @@ public class SingletonWithPrototypeTest1 {
 
         ClientBean clientBean2 = ac.getBean(ClientBean.class);
         int count2 = clientBean1.logic();
-        assertThat(count2).isEqualTo(2);  // 왜 1이 아니라 2일까? 의도대로라면 1이 나와야 함.
-        /** ClientBean.logic() -> PrototypeBean.addCount()...
-         * 싱글톤 빈과 프로토타입 빈을 함께 사용할 때,
-         * 어떻게 하면 사용할 때 마다 항상 새로운 프로토타입 빈을 생성할 수 있을까?
-         * */
+        assertThat(count2).isEqualTo(1); //성공
+//        assertThat(count2).isEqualTo(2); //실패
     }
 
     @Scope("singleton")
